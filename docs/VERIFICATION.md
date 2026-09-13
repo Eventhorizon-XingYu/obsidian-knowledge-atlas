@@ -17,4 +17,6 @@
 
 当前验证宿主是 Windows 1.13.7。清单最低版本 1.8.7 按使用的公开 API 类型约束设定，未逐版运行旧版本；手机和 macOS/Linux 未做真机测试。源码没有 Node/Electron 运行时依赖，清单允许移动端加载，但兼容声明不等于全平台实测。
 
-GitHub 工作流和社区市场收录尚未在远端执行。本地可安装和测试通过，不代表已上架社区市场。
+GitHub 远端 [Check](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/actions/runs/34760613409) 与 [Release](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/actions/runs/34760613384) 均通过。已公开发布 [1.0.0](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/releases/tag/1.0.0)，实际下载并核验了必需安装附件、版本号、插件 ID 和 SHA-256 校验值。
+
+Obsidian 社区市场尚未提交：需要维护者登录社区账号、关联 GitHub 并确认开发者政策。GitHub 发布成功不代表已上架社区市场。
