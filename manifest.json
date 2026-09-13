@@ -1,0 +1,9 @@
+{
+  "id": "knowledge-atlas",
+  "name": "Knowledge Atlas",
+  "version": "1.0.0",
+  "minAppVersion": "1.8.7",
+  "description": "Explore and manage notes in an interactive graph with search, previews, local neighborhoods and live updates.",
+  "author": "Knowledge Atlas contributors",
+  "isDesktopOnly": false
+}

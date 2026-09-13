@@ -1,0 +1,22 @@
+{
+  "name": "obsidian-knowledge-atlas",
+  "version": "1.0.0",
+  "description": "An interactive, local-first knowledge graph and note manager for Obsidian.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node esbuild.config.mjs --watch",
+    "build": "tsc --noEmit && node esbuild.config.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm test && npm run build",
+    "package": "npm run check && node scripts/package.mjs"
+  },
+  "dependencies": { "force-graph": "1.49.0" },
+  "devDependencies": {
+    "@types/node": "22.18.6",
+    "esbuild": "0.25.10",
+    "obsidian": "1.8.7",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,0 +1,20 @@
+# 验证记录
+
+日期：2026-09-13。
+
+## 已完成
+
+- `npm run package` 成功：8 项纯数据测试、TypeScript 严格检查、生产构建与发行目录生成通过。
+- Windows 原生 Obsidian **1.13.7**：独立 `Atlas-test-vault` 中 16 项集成测试通过，0 项失败。报告见 [native-test-results.json](native-test-results.json)。
+- 真实界面检查：深色图谱、连线、节点标题、详情操作、Markdown 预览可见；用鼠标拖动节点后位置与连线正常更新。
+- 发行包只含 `main.js`、`manifest.json`、`styles.css`、`LICENSE` 和依赖许可证，另有 SHA-256 校验值；没有示例库和私人文档。
+
+![在原生 Obsidian 中运行的人造示例库](screenshot.png)
+
+## 验证范围
+
+测试库包含中文标题、别名、标签、重名文件、孤立笔记和多层链接。集成检查覆盖了生产弹窗与原生文件 API，没有在用户日常文档上执行增删改测试。
+
+当前验证宿主是 Windows 1.13.7。清单最低版本 1.8.7 按使用的公开 API 类型约束设定，未逐版运行旧版本；手机和 macOS/Linux 未做真机测试。源码没有 Node/Electron 运行时依赖，清单允许移动端加载，但兼容声明不等于全平台实测。
+
+GitHub 工作流和社区市场收录尚未在远端执行。本地可安装和测试通过，不代表已上架社区市场。

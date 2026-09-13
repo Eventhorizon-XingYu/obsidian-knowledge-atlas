@@ -1,0 +1,25 @@
+name: Release
+on:
+  push:
+    tags: ['*.*.*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run package
+      - name: Verify tag and create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "${GITHUB_REF_NAME}" = "$(node -p 'require("./manifest.json").version')"
+          cd dist
+          zip -r knowledge-atlas.zip knowledge-atlas
+          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes knowledge-atlas/main.js knowledge-atlas/manifest.json knowledge-atlas/styles.css knowledge-atlas/LICENSE knowledge-atlas/THIRD_PARTY_NOTICES.md SHA256SUMS.txt knowledge-atlas.zip

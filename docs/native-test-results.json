@@ -1,0 +1,72 @@
+{
+  "finished": true,
+  "passed": 16,
+  "failed": 0,
+  "hostVersion": "1.13.7",
+  "results": [
+    {
+      "name": "Plugin loads in native Obsidian and registers both commands",
+      "passed": true
+    },
+    {
+      "name": "Real canvas renders the full fixture graph and metadata links",
+      "passed": true
+    },
+    {
+      "name": "Search input resolves Chinese aliases and tags using native metadata",
+      "passed": true
+    },
+    {
+      "name": "Folder and tag selectors filter the real graph",
+      "passed": true
+    },
+    {
+      "name": "Preview renders markdown from the current native vault",
+      "passed": true
+    },
+    {
+      "name": "Native file opening keeps the atlas tab available",
+      "passed": true
+    },
+    {
+      "name": "Local neighborhoods include incoming and outgoing links",
+      "passed": true
+    },
+    {
+      "name": "New-note modal creates a Chinese path with missing parents and refreshes the graph",
+      "passed": true
+    },
+    {
+      "name": "Create rejects a collision without changing original content",
+      "passed": true
+    },
+    {
+      "name": "Create rejects path traversal before touching the vault",
+      "passed": true
+    },
+    {
+      "name": "Link dialog appends a native internal link and metadata catches up",
+      "passed": true
+    },
+    {
+      "name": "Rename/move modal updates the native file and selected graph node",
+      "passed": true
+    },
+    {
+      "name": "Preview follows modifications and deletion confirmation is cancellable",
+      "passed": true
+    },
+    {
+      "name": "Confirmed trash uses the native local trash, and removes node from graph",
+      "passed": true
+    },
+    {
+      "name": "Excluded folders, English UI, theme mode and animation off apply without restart",
+      "passed": true
+    },
+    {
+      "name": "Closing native view releases graph, observer and preview components; reopening works",
+      "passed": true
+    }
+  ]
+}
