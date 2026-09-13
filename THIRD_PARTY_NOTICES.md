@@ -1,6 +1,6 @@
 # Third-party notices
 
-Knowledge Atlas bundles the following open-source dependencies. Obsidian is provided by the host and is not redistributed.
+Xingyu Note Atlas bundles the following open-source dependencies. Obsidian is provided by the host and is not redistributed.
 
 ## force-graph 1.49.0
 

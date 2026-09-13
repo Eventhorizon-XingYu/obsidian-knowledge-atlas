@@ -26,7 +26,7 @@ export class AtlasSettingsTab extends PluginSettingTab {
   display(): void {
     const t = translator(this.plugin.settings.language, getLanguage());
     const el = this.containerEl; el.empty();
-    el.createEl('h2', { text: 'Knowledge Atlas' });
+    el.createEl('h2', { text: 'Xingyu Note Atlas' });
     new Setting(el).setName(t('language')).setDesc(t('languageHelp')).addDropdown(c => c
       .addOptions({ auto: t('auto'), zh: '简体中文', en: 'English' }).setValue(this.plugin.settings.language)
       .onChange(async value => { this.plugin.settings.language = value as Language; await this.plugin.saveSettings(); this.display(); }));

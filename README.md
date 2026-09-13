@@ -1,10 +1,10 @@
-# Knowledge Atlas · 知识图谱
+# Xingyu Note Atlas · 星宇笔记图谱
 
 在 Obsidian 中直接探索和管理笔记的原生插件。深色力导向图、可拖拽节点、搜索筛选、笔记预览，以及实时更新的链接关系。无需单独的网页服务，也不需要导出知识库。
 
 [English](README.en.md) · [贡献指南](CONTRIBUTING.md) · [发布指南](docs/RELEASING.md)
 
-![原生 Obsidian 中的 Knowledge Atlas](docs/screenshot.png)
+![原生 Obsidian 中的 Xingyu Note Atlas](docs/screenshot.png)
 
 [当前版本的验证记录](docs/VERIFICATION.md)
 
@@ -24,12 +24,14 @@
 
 要求 Obsidian **1.8.7+**。安装插件不需要 Node.js。
 
-1. 从 Release 获取 `main.js`、`manifest.json`、`styles.css`，或使用本地构建生成的 `dist/knowledge-atlas/`。
-2. 把它们放到你的知识库配置目录：`<vault>/.obsidian/plugins/knowledge-atlas/`。如果使用自定义配置目录，将 `.obsidian` 替换为实际目录。
-3. 在 Obsidian「设置 → 第三方插件」中启用 **Knowledge Atlas**。如果列表没有更新，重新加载 Obsidian。
-4. 点击左侧网络图标，或在命令面板运行 **Knowledge Atlas: 打开知识图谱**。
+1. 从 [GitHub Release](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/releases/latest) 获取 `main.js`、`manifest.json`、`styles.css`，或使用本地构建生成的 `dist/xingyu-note-atlas/`。
+2. 把它们放到你的知识库配置目录：`<vault>/.obsidian/plugins/xingyu-note-atlas/`。如果使用自定义配置目录，将 `.obsidian` 替换为实际目录。
+3. 在 Obsidian「设置 → 第三方插件」中启用 **Xingyu Note Atlas**。如果列表没有更新，重新加载 Obsidian。
+4. 点击左侧网络图标，或在命令面板运行 **Xingyu Note Atlas: 打开知识图谱**。
 
-本项目尚不等同于已被 Obsidian 社区插件市场收录。市场收录需要另行提交官方仓库并通过审核；不影响手动安装。
+本项目尚未被 Obsidian 社区插件市场收录。市场收录需通过 [Obsidian 社区网站](https://community.obsidian.md) 提交并通过审核；不影响手动安装。
+
+本项目的插件 ID 是 `xingyu-note-atlas`，与其他作者的 Knowledge Atlas 插件不同。旧的本地开发版本曾使用 `knowledge-atlas`，不要用本项目的文件覆盖同名第三方插件。
 
 ## 使用
 

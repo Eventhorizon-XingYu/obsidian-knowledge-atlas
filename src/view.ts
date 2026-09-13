@@ -4,7 +4,7 @@ import type AtlasPlugin from './main';
 import { AtlasNode, Filter, Graph, filterGraph } from './graph';
 import { Translate, translator } from './i18n';
 import { ActionModal, LinkPicker, PathModal, errorText, requireNote } from './operations';
-export const VIEW_TYPE = 'knowledge-atlas-view';
+export const VIEW_TYPE = 'xingyu-note-atlas-view';
 type RenderLink = LinkObject<AtlasNode>;
 
 export class AtlasView extends ItemView {

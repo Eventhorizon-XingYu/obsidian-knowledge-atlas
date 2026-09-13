@@ -1,10 +1,10 @@
-# Knowledge Atlas
+# Xingyu Note Atlas
 
 A native Obsidian plugin for exploring and managing Markdown notes in an interactive force-directed graph. No separate website, data export or server is needed.
 
 [简体中文](README.md)
 
-![Knowledge Atlas in native Obsidian](docs/screenshot.png)
+![Xingyu Note Atlas in native Obsidian](docs/screenshot.png)
 
 ## Features
 
@@ -18,9 +18,11 @@ A native Obsidian plugin for exploring and managing Markdown notes in an interac
 
 ## Install
 
-Requires Obsidian **1.8.7+**. Copy release files `main.js`, `manifest.json` and `styles.css` into `<vault>/.obsidian/plugins/knowledge-atlas/`, then enable **Knowledge Atlas** under Community plugins. Replace `.obsidian` if your vault uses a different configuration directory. Reload Obsidian if needed. Open via the ribbon network icon or the command **Knowledge Atlas: Open knowledge atlas**.
+Requires Obsidian **1.8.7+**. Copy release files `main.js`, `manifest.json` and `styles.css` into `<vault>/.obsidian/plugins/xingyu-note-atlas/`, then enable **Xingyu Note Atlas** under Community plugins. Replace `.obsidian` if your vault uses a different configuration directory. Reload Obsidian if needed. Open via the ribbon network icon or the command **Xingyu Note Atlas: Open knowledge atlas**.
 
-Community catalog inclusion requires a separate upstream submission and review. Manual installation works independently of catalog status.
+Download the assets from [GitHub Releases](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/releases/latest). Community catalog inclusion requires submission through [Obsidian Community](https://community.obsidian.md) and review; this plugin is not listed yet. Manual installation works independently of catalog status.
+
+The plugin ID is `xingyu-note-atlas`. This project is distinct from the third-party Knowledge Atlas plugin; never overwrite that plugin's installation with these files.
 
 ## Usage and behavior
 
@@ -42,7 +44,7 @@ npm run check
 npm run package
 ```
 
-The installable directory is `dist/knowledge-atlas/`. `npm run dev` watches source files. See [testing](docs/TESTING.md), [release instructions](docs/RELEASING.md) and [contributing](CONTRIBUTING.md). The repository includes CI and a version-tag release workflow.
+The installable directory is `dist/xingyu-note-atlas/`. `npm run dev` watches source files. See [testing](docs/TESTING.md), [release instructions](docs/RELEASING.md) and [contributing](CONTRIBUTING.md). The repository includes CI and a version-tag release workflow.
 
 ## License
 

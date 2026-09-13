@@ -21,5 +21,5 @@ jobs:
         run: |
           test "${GITHUB_REF_NAME}" = "$(node -p 'require("./manifest.json").version')"
           cd dist
-          zip -r knowledge-atlas.zip knowledge-atlas
-          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes knowledge-atlas/main.js knowledge-atlas/manifest.json knowledge-atlas/styles.css knowledge-atlas/LICENSE knowledge-atlas/THIRD_PARTY_NOTICES.md SHA256SUMS.txt knowledge-atlas.zip
+          zip -r xingyu-note-atlas.zip xingyu-note-atlas
+          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes xingyu-note-atlas/main.js xingyu-note-atlas/manifest.json xingyu-note-atlas/styles.css xingyu-note-atlas/LICENSE xingyu-note-atlas/THIRD_PARTY_NOTICES.md SHA256SUMS.txt xingyu-note-atlas.zip

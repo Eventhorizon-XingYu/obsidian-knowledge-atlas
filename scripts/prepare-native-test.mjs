@@ -6,9 +6,9 @@ const vault = path.join(root, 'Atlas-test-vault');
 const profile = path.join(root, 'profile');
 // Test fixtures only. This profile never registers or edits the user's vault.
 await mkdir(profile, { recursive: true });
-for (const name of ['knowledge-atlas', 'atlas-native-tests']) await mkdir(path.join(vault, '.obsidian/plugins', name), { recursive: true });
+for (const name of ['xingyu-note-atlas', 'atlas-native-tests']) await mkdir(path.join(vault, '.obsidian/plugins', name), { recursive: true });
 const contents = {
-  'Welcome.md': '# Welcome to Knowledge Atlas\n\nExplore your ideas.\n\n[[Projects/Atlas]] · [[Learning/Graph theory]] · [[Ideas/Local first]]\n\n#atlas\n',
+  'Welcome.md': '# Welcome to Xingyu Note Atlas\n\nExplore your ideas.\n\n[[Projects/Atlas]] · [[Learning/Graph theory]] · [[Ideas/Local first]]\n\n#atlas\n',
   'Projects/Atlas.md': '---\naliases: [Knowledge map]\ntags: [project, atlas]\n---\n# Atlas\n\nA visual home for your notes.\n\n[[Learning/Graph theory]]\n[[Ideas/Local first]]\n[[Projects/Release]]\n',
   'Projects/Release.md': '# Release checklist\n\n- [ ] Review docs\n- [ ] Build plugin\n\n[[Projects/Atlas]]\n',
   'Learning/Graph theory.md': '# Graph theory\n\nNodes represent notes. Edges represent links.\n\n[[Learning/Algorithms]]\n[[Learning/中文笔记]]\n',
@@ -26,11 +26,11 @@ for (const [name, text] of Object.entries(contents)) {
   // Never overwrite edited fixtures on a repeated preparation run.
   await writeFile(target, text, { flag: 'wx' }).catch(e => { if (e.code !== 'EEXIST') throw e; });
 }
-for (const file of ['main.js', 'styles.css', 'manifest.json']) await copyFile(file, path.join(vault, '.obsidian/plugins/knowledge-atlas', file));
-await writeFile(path.join(vault, '.obsidian/plugins/knowledge-atlas/data.json'), JSON.stringify({ language: 'zh', maxNodes: 1500 }));
+for (const file of ['main.js', 'styles.css', 'manifest.json']) await copyFile(file, path.join(vault, '.obsidian/plugins/xingyu-note-atlas', file));
+await writeFile(path.join(vault, '.obsidian/plugins/xingyu-note-atlas/data.json'), JSON.stringify({ language: 'zh', maxNodes: 1500 }));
 await writeFile(path.join(vault, '.obsidian/plugins/atlas-native-tests/manifest.json'), JSON.stringify({ id: 'atlas-native-tests', name: 'Atlas native test harness', version: '1.0.0', minAppVersion: '1.8.7', author: 'Local tests', description: 'Runs only inside the generated Atlas-test-vault.', isDesktopOnly: true }));
 await build({ entryPoints: ['scripts/native-tests.ts'], bundle: true, external: ['obsidian'], format: 'cjs', platform: 'browser', outfile: path.join(vault, '.obsidian/plugins/atlas-native-tests/main.js') });
-await writeFile(path.join(vault, '.obsidian/community-plugins.json'), JSON.stringify(['knowledge-atlas', 'atlas-native-tests']));
+await writeFile(path.join(vault, '.obsidian/community-plugins.json'), JSON.stringify(['xingyu-note-atlas', 'atlas-native-tests']));
 await writeFile(path.join(vault, '.obsidian/app.json'), JSON.stringify({ alwaysUpdateLinks: true, trashOption: 'local' }));
 await writeFile(path.join(vault, '.obsidian/appearance.json'), JSON.stringify({ theme: 'obsidian' }));
 await writeFile(path.join(profile, 'obsidian.json'), JSON.stringify({ vaults: { 'a71a570000000001': { path: vault, ts: Date.now(), open: true } } }));

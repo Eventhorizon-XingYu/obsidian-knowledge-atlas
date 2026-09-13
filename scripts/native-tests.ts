@@ -29,11 +29,11 @@ export default class NativeTests extends Plugin {
     };
     await delay(1200);
     await test('Plugin loads in native Obsidian and registers both commands', async () => {
-      atlas = (this.app as any).plugins.plugins['knowledge-atlas']; check(atlas, 'Plugin did not load');
-      check((this.app as any).commands.commands['knowledge-atlas:open-atlas'], 'Open command missing');
-      check((this.app as any).commands.commands['knowledge-atlas:explore-note'], 'Local command missing');
-      await atlas.openAtlas(); view = this.app.workspace.getLeavesOfType('knowledge-atlas-view')[0]?.view;
-      check(view?.getViewType() === 'knowledge-atlas-view', 'Native view missing');
+      atlas = (this.app as any).plugins.plugins['xingyu-note-atlas']; check(atlas, 'Plugin did not load');
+      check((this.app as any).commands.commands['xingyu-note-atlas:open-atlas'], 'Open command missing');
+      check((this.app as any).commands.commands['xingyu-note-atlas:explore-note'], 'Local command missing');
+      await atlas.openAtlas(); view = this.app.workspace.getLeavesOfType('xingyu-note-atlas-view')[0]?.view;
+      check(view?.getViewType() === 'xingyu-note-atlas-view', 'Native view missing');
     });
     if (atlas && view) {
       await delay(1600);
@@ -124,7 +124,7 @@ export default class NativeTests extends Plugin {
       await test('Closing native view releases graph, observer and preview components; reopening works', async () => {
         const old = view; await old.leaf.detach(); await delay(100);
         check(old.graph === undefined && old.observer === undefined && old.previewComponent === undefined, 'Resources leaked');
-        await atlas.openAtlas(); view = this.app.workspace.getLeavesOfType('knowledge-atlas-view')[0]?.view;
+        await atlas.openAtlas(); view = this.app.workspace.getLeavesOfType('xingyu-note-atlas-view')[0]?.view;
         check(view?.graph, 'Reopen failed'); await delay(500); view.select('Projects/Atlas.md');
       });
     }

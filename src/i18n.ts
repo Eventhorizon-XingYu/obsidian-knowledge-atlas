@@ -1,5 +1,5 @@
 const en = {
-  title: 'Knowledge Atlas', openGraph: 'Open knowledge atlas', localGraph: 'Explore current note',
+  title: 'Xingyu Note Atlas', openGraph: 'Open knowledge atlas', localGraph: 'Explore current note',
   search: 'Search notes, paths, tags or aliases…', allFolders: 'All folders', allTags: 'All tags',
   orphans: 'Hide unlinked notes', fit: 'Fit graph', reset: 'Reset filters', refresh: 'Refresh',
   newNote: 'New note', notes: 'notes', links: 'links', matched: 'matched', total: 'total',
@@ -34,7 +34,7 @@ const en = {
 } as const;
 type Key = keyof typeof en;
 const zh: Record<Key, string> = {
-  title: '知识图谱', openGraph: '打开知识图谱', localGraph: '探索当前笔记',
+  title: '星宇笔记图谱', openGraph: '打开知识图谱', localGraph: '探索当前笔记',
   search: '搜索笔记、路径、标签或别名…', allFolders: '全部文件夹', allTags: '全部标签',
   orphans: '隐藏孤立笔记', fit: '适应画布', reset: '重置筛选', refresh: '刷新',
   newNote: '新建笔记', notes: '篇笔记', links: '条链接', matched: '匹配', total: '总计',

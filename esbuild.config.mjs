@@ -3,7 +3,7 @@ const options = {
   entryPoints: ['src/main.ts'], bundle: true, external: ['obsidian'],
   format: 'cjs', target: 'es2020', platform: 'browser', outfile: 'main.js',
   sourcemap: false, minify: true, legalComments: 'eof',
-  banner: { js: '/* Knowledge Atlas | MIT | Bundled dependencies retain their licenses. */' }
+  banner: { js: '/* Xingyu Note Atlas | MIT | Bundled dependencies retain their licenses. */' }
 };
 if (process.argv.includes('--watch')) {
   const context = await esbuild.context(options);
