@@ -4,6 +4,8 @@ on:
     tags: ['*.*.*']
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -15,11 +17,17 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run package
+      - name: Attest main.js
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/xingyu-note-atlas/main.js
+      - name: Attest styles.css
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/xingyu-note-atlas/styles.css
       - name: Verify tag and create release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           test "${GITHUB_REF_NAME}" = "$(node -p 'require("./manifest.json").version')"
-          cd dist
-          zip -r xingyu-note-atlas.zip xingyu-note-atlas
-          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes xingyu-note-atlas/main.js xingyu-note-atlas/manifest.json xingyu-note-atlas/styles.css xingyu-note-atlas/LICENSE xingyu-note-atlas/THIRD_PARTY_NOTICES.md SHA256SUMS.txt xingyu-note-atlas.zip
+          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes dist/xingyu-note-atlas/main.js dist/xingyu-note-atlas/manifest.json dist/xingyu-note-atlas/styles.css
