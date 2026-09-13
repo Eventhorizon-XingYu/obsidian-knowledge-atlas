@@ -20,7 +20,7 @@ A native Obsidian plugin for exploring and managing Markdown notes in an interac
 
 Requires Obsidian **1.8.7+**. Copy release files `main.js`, `manifest.json` and `styles.css` into `<vault>/.obsidian/plugins/xingyu-note-atlas/`, then enable **Xingyu Note Atlas** under Community plugins. Replace `.obsidian` if your vault uses a different configuration directory. Reload Obsidian if needed. Open via the ribbon network icon or the command **Xingyu Note Atlas: Open knowledge atlas**.
 
-Download the assets from [GitHub Releases](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/releases/latest). Community catalog inclusion requires submission through [Obsidian Community](https://community.obsidian.md) and review; this plugin is not listed yet. Manual installation works independently of catalog status.
+Download the assets from [GitHub Releases](https://github.com/Eventhorizon-XingYu/obsidian-knowledge-atlas/releases/latest). The plugin is now [listed in the Obsidian Community directory](https://community.obsidian.md/plugins/xingyu-note-atlas), with automated review in progress. Manual installation works independently of review status.
 
 The plugin ID is `xingyu-note-atlas`. This project is distinct from the third-party Knowledge Atlas plugin; never overwrite that plugin's installation with these files.
 

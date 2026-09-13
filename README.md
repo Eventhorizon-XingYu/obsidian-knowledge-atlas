@@ -29,7 +29,7 @@
 3. 在 Obsidian「设置 → 第三方插件」中启用 **Xingyu Note Atlas**。如果列表没有更新，重新加载 Obsidian。
 4. 点击左侧网络图标，或在命令面板运行 **Xingyu Note Atlas: 打开知识图谱**。
 
-本项目尚未被 Obsidian 社区插件市场收录。市场收录需通过 [Obsidian 社区网站](https://community.obsidian.md) 提交并通过审核；不影响手动安装。
+本项目已提交到 [Obsidian 社区插件市场](https://community.obsidian.md/plugins/xingyu-note-atlas)，当前条目正在进行自动审核。审核期间仍可通过 GitHub Release 手动安装。
 
 本项目的插件 ID 是 `xingyu-note-atlas`，与其他作者的 Knowledge Atlas 插件不同。旧的本地开发版本曾使用 `knowledge-atlas`，不要用本项目的文件覆盖同名第三方插件。
 
