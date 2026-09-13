@@ -2,7 +2,7 @@
 
 A native Obsidian plugin for exploring and managing Markdown notes in an interactive force-directed graph. No separate website, data export or server is needed.
 
-[简体中文](README.md)
+[简体中文](README.zh-CN.md)
 
 ![Xingyu Note Atlas in native Obsidian](docs/screenshot.png)
 

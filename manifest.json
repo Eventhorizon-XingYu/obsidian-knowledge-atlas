@@ -1,7 +1,7 @@
 {
   "id": "xingyu-note-atlas",
   "name": "Xingyu Note Atlas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minAppVersion": "1.8.7",
   "description": "Explore and manage notes in an interactive graph with search, previews, local neighborhoods and live updates.",
   "author": "Eventhorizon-XingYu",

@@ -1,4 +1,4 @@
-import { Component, ItemView, MarkdownRenderer, Menu, Notice, TFile, WorkspaceLeaf, getLanguage } from 'obsidian';
+import { Component, ItemView, MarkdownRenderer, Menu, Notice, WorkspaceLeaf, getLanguage } from 'obsidian';
 import ForceGraph, { LinkObject } from 'force-graph';
 import type AtlasPlugin from './main';
 import { AtlasNode, Filter, Graph, filterGraph } from './graph';

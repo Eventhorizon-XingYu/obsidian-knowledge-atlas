@@ -81,7 +81,7 @@ export function filterGraph(graph: Graph, filter: Filter): Graph & { matched: nu
 /** 禁止绝对路径、父目录跳转和跨平台非法名字；所有写入都相对当前 vault。 */
 export function notePath(input: string): string {
   const raw = input.trim().replace(/\\/g, '/');
-  if (!raw || raw.startsWith('/') || /[:*?"<>|\u0000-\u001f]/.test(raw)) throw new Error('invalidPath');
+  if (!raw || raw.startsWith('/') || /[:*?"<>|]/.test(raw) || Array.from(raw).some(char => char.charCodeAt(0) < 32)) throw new Error('invalidPath');
   const parts = raw.split('/');
   if (parts.some(p => !p || p === '.' || p === '..' || p.startsWith('.') || /[ .]$/.test(p)
     || /^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(p))) throw new Error('invalidPath');

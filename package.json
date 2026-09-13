@@ -1,6 +1,6 @@
 {
   "name": "obsidian-knowledge-atlas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An interactive, local-first knowledge graph and note manager for Obsidian.",
   "license": "MIT",
   "private": true,
